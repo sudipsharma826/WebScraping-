@@ -32,8 +32,15 @@ const scrapePage = async (page) => {
       // trim() is used to remove the whitespace from the data if it exists.
       // (this is found from the website inspecting)
       const author = $(element).find('.author').text().trim();
-      const tags = $(element).find('.tag').text().trim();
-      result.push({ quote, author, tags });
+      const tags = [];//tags array to store more then one tags
+      $(element).find('.tag').each((i,tag) =>{//each use to iterate over all the element with class name tag.
+        //and push then one by one ,so sapce problem can be sort out
+        tags.push($(tag).text());//we use $(tag) becasue $ denoted the cheeio and tag is the pratment in the each ,where tag value is auto genertated.
+        //.text() extract test contain only
+
+      });
+
+      result.push({ quote, author, tags });//to psuh in array the name of quote ,author and tags
     });
   } catch (error) { // catch the error if any occurs
     console.error(`Error fetching data from ${website}page/${page}/`, error);
