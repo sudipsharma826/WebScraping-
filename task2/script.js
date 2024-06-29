@@ -33,7 +33,7 @@ const scrapePage = async (page) => {
       // (this is found from the website inspecting)
       const author = $(element).find('.author').text().trim();
       const tags = [];//tags array to store more then one tags
-      $(element).find('.tag').each((i,tag) =>{//each use to iterate over all the element with class name tag.
+      $(element).find('.tag').each((i,tag) =>{//each use to iterate over all the element with class name tag one by one.
         //and push then one by one ,so sapce problem can be sort out
         tags.push($(tag).text());//we use $(tag) becasue $ denoted the cheeio and tag is the pratment in the each ,where tag value is auto genertated.
         //.text() extract test contain only
