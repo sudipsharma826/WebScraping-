@@ -1,0 +1,23 @@
+steps wise expalined
+1.Import the packages ( axios,cheerio) and modules of node.js ( fs).
+2.create the variable to store the website link,no of pages and the array to store the data.
+3.(sub-function)Asyn function to scraped the function page wise with argument of page numbers.
+  * try {
+    store the data extrace by axios and cherrio in the varible.
+    select the feild/class/id from where we need to get the data.
+    push the data in the array
+
+  }
+  *catch{
+    show the erro with message and erro code if error occured in the program
+  }
+4.(main function)aysn function to get all the pages data (which control the sub-function which absctacted data page wise)
+  *it auusre to get total no of page to be included and data can be extracted.
+5.Save the arry data in the txt file using writeFileSync ('file_name',data,'utf-8)
+6.Call the main function
+
+Syntax to remeber:
+(in command prompt)ro run the program
+npm init
+npm intall axois cherrio;//to get the packrage
+node file_name.js to run out the file
