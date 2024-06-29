@@ -16,7 +16,7 @@ const scrapePage = async (url) => {
       const element = $('.quote')[i];
       const quoteText = $(element).find('.text').text().trim();
       const author = $(element).find('.author').text().trim();
-      const tags = $(element).find('.tags .tag').map((i, el) => $(el).text().trim()).get();
+      const tags = $(element).find('.tag').text().trim();
 
       quotes.push({ quoteText, author, tags });
     }

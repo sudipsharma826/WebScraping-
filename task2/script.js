@@ -32,7 +32,7 @@ const scrapePage = async (page) => {
       // trim() is used to remove the whitespace from the data if it exists.
       // (this is found from the website inspecting)
       const author = $(element).find('.author').text().trim();
-      const tags = $(element).find('.tags .tag').map((i, el) => $(el).text().trim()).get();
+      const tags = $(element).find('.tag').text().trim();
       result.push({ quote, author, tags });
     });
   } catch (error) { // catch the error if any occurs
